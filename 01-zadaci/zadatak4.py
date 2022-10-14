@@ -1,5 +1,5 @@
 def equalLists(list1, list2):
-	if len(list1) != len(list2): raise Exception()
+	assert len(list1) == len(list2), "Lists are not of equal length."
 	return [itemFromList1 if itemFromList1==itemFromList2 else -1 for itemFromList1,itemFromList2 in zip(list1, list2)]
 
 print(equalLists([1, 2, 3, 4, 5], [2, 2, 4, 4, 5]))

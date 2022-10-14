@@ -1,5 +1,5 @@
 def strings(listOfStrings):
-	if not all(isinstance(item, str) for item in listOfStrings): raise Exception()
+	assert all(isinstance(item, str) for item in listOfStrings), "Not all items of list are strings."
 	return [item for item in listOfStrings if len(item)>4]
 
 print(strings(["Pas", "Macka", "Stol"]))

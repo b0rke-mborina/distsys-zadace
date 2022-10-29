@@ -8,12 +8,12 @@ async def afunc1():
 		await asyncio.sleep(0.9)
 
 async def afunc2():
-	return psutil.cpu_percent(percpu=False)
+	return psutil.cpu_percent(10)
 
 async def main():
-	await afunc1()
-	res = await afunc2()
-	print(res)
+	asyncio.create_task(afunc1())
+	res = asyncio.create_task(afunc2())
+	print(await res)
 
 if __name__ == "__main__":
 	asyncio.run(main())

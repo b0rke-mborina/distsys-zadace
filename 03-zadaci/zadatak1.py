@@ -2,7 +2,7 @@ import asyncio
 import os
 
 async def afun1(listOfFileNames):
-	await asyncio.sleep(0.1)
+	await asyncio.sleep(0.2)
 	return [{"naziv": fileName, "velicina": os.path.getsize(os.path.dirname(os.path.realpath(__file__)) + "\\" + fileName)} for fileName in listOfFileNames]
 
 def fun2(listOfFileNames):
